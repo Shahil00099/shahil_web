@@ -1,4 +1,4 @@
-const sections = [ "about", "skills", "qualification", "projects", "experiences", "contact"];
+const sections = [ "about", "skills", "qualification", "experiences", "projects",  "contact"];
 
 sections.forEach(section => {
   const container = document.getElementById(section);
