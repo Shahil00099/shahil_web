@@ -1,54 +1,78 @@
 <section class="skills py-20 px-6" id="skills">
-    <h2 class="text-3xl font-bold text-center mb-2">Skills</h2>
-    <span class="text-gray-400 text-center block mb-12">My technical level</span>
+  <h2 class="text-3xl font-bold text-center mb-2">Skills</h2>
+  <span class="text-gray-400 text-center block mb-12">My technical level</span>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
-      <!-- Skill 1 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
+    <!-- Skill 1: Programming Languages -->
+    <div class="group bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition cursor-pointer">
+      <div class="flex items-center justify-between mb-4 space-x-3">
+        <div class="flex items-center space-x-3">
           <i class="fas fa-pencil-ruler text-cyberCyan text-2xl"></i>
           <h3 class="text-xl font-semibold">Programming Languages</h3>
         </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>C</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
-        </ul>
+        <i class="fas fa-chevron-down text-cyberCyan transition-transform duration-300 group-hover:rotate-180"></i>
       </div>
-
-      <!-- Skill 2 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
-          <i class="fas fa-code text-cyberCyan text-2xl"></i>
-          <h3 class="text-xl font-semibold">IT Constructs</h3>
-        </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>DBMS</li>
-          <li>DS & Algorithms</li>
-          <li>Computer Graphics</li>
-          <li>AI</li>
-        </ul>
-      </div>
-
-      <!-- Skill 3 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
-          <i class="fas fa-swatchbook text-cyberCyan text-2xl"></i>
-          <h3 class="text-xl font-semibold">Technologies</h3>
-        </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>DEV C++</li>
-          <li>VSC</li>
-          <li>MySQL</li>
-          <li>Notepad++</li>
-          <li>NodeJs</li>
-        </ul>
-      </div>
-
+      <ul class="list-disc list-inside text-gray-300 space-y-1 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-96">
+        <li>C</li>
+        <li>C++ (DEV C++)</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Skill 2: Frameworks / Libraries / Tools -->
+    <div class="group bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition cursor-pointer">
+      <div class="flex items-center justify-between mb-4 space-x-3">
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-layer-group text-cyberCyan text-2xl"></i>
+          <h3 class="text-xl font-semibold">Frameworks / Libraries / Tools</h3>
+        </div>
+        <i class="fas fa-chevron-down text-cyberCyan transition-transform duration-300 group-hover:rotate-180"></i>
+      </div>
+      <ul class="list-disc list-inside text-gray-300 space-y-1 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-96">
+        <li>React (Web)</li>
+        <li>React Native (Mobile)</li>
+        <li>Laravel (PHP)</li>
+        <li>Node.js</li>
+        <li>WordPress</li>
+      </ul>
+    </div>
+
+    <!-- Skill 3: Databases & APIs -->
+    <div class="group bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition cursor-pointer">
+      <div class="flex items-center justify-between mb-4 space-x-3">
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-database text-cyberCyan text-2xl"></i>
+          <h3 class="text-xl font-semibold">Databases & APIs</h3>
+        </div>
+        <i class="fas fa-chevron-down text-cyberCyan transition-transform duration-300 group-hover:rotate-180"></i>
+      </div>
+      <ul class="list-disc list-inside text-gray-300 space-y-1 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-96">
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>Postman (for testing APIs)</li>
+      </ul>
+    </div>
+
+    <!-- Skill 4: Other IT Constructs / Skills -->
+    <div class="group bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition cursor-pointer">
+      <div class="flex items-center justify-between mb-4 space-x-3">
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-cogs text-cyberCyan text-2xl"></i>
+          <h3 class="text-xl font-semibold">Other IT Constructs / Skills</h3>
+        </div>
+        <i class="fas fa-chevron-down text-cyberCyan transition-transform duration-300 group-hover:rotate-180"></i>
+      </div>
+      <ul class="list-disc list-inside text-gray-300 space-y-1 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-96">
+        <li>Data Structures & Algorithms (DSA)</li>
+        <li>Embedded Systems basics</li>
+        <li>Networking & Cybersecurity basics</li>
+        <li>Graphic Design (Photoshop, Illustrator, Canva)</li>
+        <li>Basic IT support & troubleshooting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>

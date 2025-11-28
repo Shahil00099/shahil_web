@@ -205,7 +205,7 @@
       }
     });
 
-
+      
   </script>
 
 
@@ -242,6 +242,21 @@
 
 
 <script src="load-sections.js"></script>
+
+<!-- JS for dropdown -->
+<script>
+  const cards = document.querySelectorAll(".skill-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const list = card.querySelector("ul");
+      const arrow = card.querySelector(".arrow-icon");
+
+      list.classList.toggle("hidden");
+      arrow.classList.toggle("rotate-180");
+    });
+  });
+</script>
 
 
 
