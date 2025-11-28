@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+  
+
 
 
   <!-- TAILWIND CDN -->
@@ -100,29 +102,14 @@
 
       <!-- MENU -->
       <ul class="hidden md:flex space-x-8 font-medium">
-        <li><a href="#home" class="hover:text-cyberCyan duration-200">Home</a></li>
-        <li class="nav__item">
-          <a href="#about" class="nav__link">
-            <i class="uil uil-user nav__icon"></i>About
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="#skills" class="nav__link">
-            <i class="uil uil-file-alt nav__icon"></i>Skills
-          </a>
-        <li class="nav__item">
-          <a href="#qualification" class="nav__link">
-            <i class="uil uil-briefcase-alt nav__icon"></i>Qualification
-          </a>
-        </li>
-        </li>
-        <li><a href="#portfolio" class="hover:text-cyberCyan duration-200">Projects</a></li>
-        <li class="nav__item">
-          <a href="#contact" class="nav__link active-link">
-            <i class="uil uil-message nav__icon"></i>Contact-Me
-          </a>
-        </li>
-      </ul>
+  <li><a href="#home" class="hover:text-cyberCyan duration-200">Home</a></li>
+  <li><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
+  <li><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
+  <li><a href="#qualification" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i>Qualification</a></li>
+  <li><a href="#projects" class="hover:text-cyberCyan duration-200">Projects</a></li>
+  <li><a href="#contact" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contact-Me</a></li>
+</ul>
+
 
       <!-- THEME TOGGLE BUTTON -->
       <button id="themeToggle" class="border border-cyberCyan text-cyberCyan px-3 py-1 rounded-xl font-semibold ml-5">
@@ -166,146 +153,15 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about py-20 px-6" id="about">
-    <h2 class="text-3xl font-bold text-center mb-2">About Me</h2>
-    <span class="text-gray-400 text-center block mb-12">My introduction</span>
-
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-
-      <!-- Photo -->
-      <img src="images/shjacket.jpg" alt="Shahil Photo"
-        class="w-full rounded-2xl shadow-lg border-4 border-cyberCyan object-cover">
-
-      <!-- Text Content -->
-      <div class="space-y-6">
-
-        <p class="text-gray-300 text-lg">
-          I’m a dedicated BIM student with a passion for creativity and exploration.
-          I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments.
-          Seeking a competitive position to enhance my skills and contribute to a professional organization.
-          I'm very much passionate to learn new stuff that interests me and can help me get better.
-        </p>
-
-        <!-- Download CV Button -->
-        <a href="CV/shrestha-shahil-cv.pdf" download
-          class="inline-flex items-center px-6 py-3 bg-cyberCyan text-black font-semibold rounded-xl shadow-lg hover:shadow-cyberPink transition">
-          Download CV
-          <i class="fas fa-download ml-3"></i>
-        </a>
-
-      </div>
-    </div>
-  </section>
+  <div id="about"></div>
 
   <!-- Skill  -->
-  <section class="skills py-20 px-6" id="skills">
-    <h2 class="text-3xl font-bold text-center mb-2">Skills</h2>
-    <span class="text-gray-400 text-center block mb-12">My technical level</span>
-
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-      <!-- Skill 1 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
-          <i class="fas fa-pencil-ruler text-cyberCyan text-2xl"></i>
-          <h3 class="text-xl font-semibold">Programming Languages</h3>
-        </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>C</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
-        </ul>
-      </div>
-
-      <!-- Skill 2 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
-          <i class="fas fa-code text-cyberCyan text-2xl"></i>
-          <h3 class="text-xl font-semibold">IT Constructs</h3>
-        </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>DBMS</li>
-          <li>DS & Algorithms</li>
-          <li>Computer Graphics</li>
-          <li>AI</li>
-        </ul>
-      </div>
-
-      <!-- Skill 3 -->
-      <div
-        class="bg-white/5 dark:bg-black/20 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-cyberCyan transition">
-        <div class="flex items-center mb-4 space-x-3">
-          <i class="fas fa-swatchbook text-cyberCyan text-2xl"></i>
-          <h3 class="text-xl font-semibold">Technologies</h3>
-        </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>DEV C++</li>
-          <li>VSC</li>
-          <li>MySQL</li>
-          <li>Notepad++</li>
-          <li>NodeJs</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
+  <div id="skills"></div> 
 
 
   <!-- Qualification  -->
-
-  <section class="qualification py-20 px-6" id="qualification">
-    <h2 class="text-3xl font-bold text-center mb-2">Qualification</h2>
-    <span class="text-gray-400 text-center block mb-12">My personal journey</span>
-
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-      <!-- SEE Card -->
-      <div
-        class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition group cursor-pointer">
-        <h3 class="text-xl font-semibold text-cyberCyan mb-2">SEE</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">Shuvatara School - 2018</p>
-        <div
-          class="text-gray-700 dark:text-gray-300 max-h-0 overflow-hidden group-hover:max-h-60 transition-all duration-500">
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Subjects: Science, Maths, English, Social Studies, Optional Maths, Computer</li>
-            <li>GPA: 2.8</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Class 12 Card -->
-      <div
-        class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition group cursor-pointer">
-        <h3 class="text-xl font-semibold text-cyberCyan mb-2">Class 12th</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">Prasadi Academy, NEB - 2021</p>
-        <div
-          class="text-gray-700 dark:text-gray-300 max-h-0 overflow-hidden group-hover:max-h-60 transition-all duration-500">
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Subjects: English, Accounts, Business Studies, Business Maths</li>
-            <li>GPA: 3.24</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bachelors Card -->
-      <div
-        class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition group cursor-pointer">
-        <h3 class="text-xl font-semibold text-cyberCyan mb-2">Bachelors</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">KCMIT - 2025</p>
-        <div
-          class="text-gray-700 dark:text-gray-300 max-h-0 overflow-hidden group-hover:max-h-60 transition-all duration-500">
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Core subjects: DSA, Embedded Systems, Design Analysis, OS, C, Java, Networking, Cyber Security, Computer
-              Organization, AI</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
+  <div id="qualification"></div>
+  
 
 
 
@@ -313,70 +169,10 @@
 
 
   <!-- PROJECTS -->
-  <section id="portfolio" class="py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">My Projects</h2>
-
-
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md hover:border-cyberCyan transition">
-        Project 1</div>
-      <div class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md hover:border-cyberCyan transition">
-        Project 2</div>
-      <div class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md hover:border-cyberCyan transition">
-        Project 3</div>
-    </div>
-  </section>
+  <div id="projects"></div>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">CONTACT ME</h2>
-    <span class="text-gray-400 text-center block mb-12">Get in Touch</span>
-
-
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-      <!-- Email Box -->
-      <a href="mailto:shahilshrestha99@gmail.com" target="_blank">
-        <div
-          class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition flex items-center gap-4 cursor-pointer">
-          <i class="fas fa-envelope text-cyberCyan text-2xl"></i>
-          <div>
-            <h3 class="text-xl font-semibold text-cyberCyan mb-1">Email</h3>
-            <p class="text-gray-700 dark:text-gray-300">shahilshrestha99@gmail.com</p>
-          </div>
-        </div>
-      </a>
-
-
-      <!-- Phone Box -->
-      <a href="tel:+9779843730815">
-  <div class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition flex items-center gap-4 cursor-pointer">
-    <i class="fas fa-phone-alt text-cyberCyan text-2xl"></i>
-    <div>
-      <h3 class="text-xl font-semibold text-cyberCyan mb-1">Phone</h3>
-      <p class="text-gray-700 dark:text-gray-300">+977-9843730815</p>
-    </div>
-  </div>
-</a>
-
-    </div>
-
-    <!-- Follow Me Box -->
-    <div
-      class="bg-gray-200 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-cyberCyan transition max-w-4xl mx-auto text-center">
-      <h3 class="text-xl font-semibold text-cyberCyan mb-4">Follow Me</h3>
-      <div class="flex justify-center gap-6 text-gray-700 dark:text-gray-300">
-        <a href="https://github.com" target="_blank" class="hover:text-cyberCyan transition text-2xl">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com" target="_blank" class="hover:text-cyberCyan transition text-2xl">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="hover:text-cyberCyan transition text-2xl">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+  <div id="contact"></div>
 
 
 
@@ -445,6 +241,7 @@
   </footer>
 
 
+<script src="load-sections.js"></script>
 
 
 
