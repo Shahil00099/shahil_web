@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <a href="#home" class="text-cyberCyan font-bold text-xl">Shahil Portfolio</a>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <title>Shahil Portfolio</title>
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-  
-
-
-
-  <!-- TAILWIND CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- CUSTOM TAILWIND CONFIG -->
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -30,6 +28,147 @@
   </script>
 
   <style>
+    /* ================= Animation Styles ================= */
+    #animation {
+      position: fixed;
+      inset: 0;
+      background: #0d0d15;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .neon {
+      text-shadow: 0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 40px currentColor;
+    }
+
+    /* Fade Up Animation */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1.2s ease-out forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.9s;
+    }
+
+    /* Typewriter */
+    .typewriter,
+.typewriter2 {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  line-height: 1.2;
+  border-right: 2px solid white; /* caret appears while typing */
+}
+
+.typewriter {
+  animation: typing1 2s steps(30) forwards;
+}
+
+.typewriter2 {
+  animation: typing2 2s steps(35) forwards;
+  animation-delay: 2s;
+}
+
+/* Just hide the caret after animation completes */
+.typewriter, .typewriter2 {
+  border-right: none;
+}
+
+
+    .typewriter {
+      animation: typing1 2s steps(30) forwards;
+    }
+
+    .typewriter2 {
+      animation: typing2 2s steps(35) forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes typing1 {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 300px;
+      }
+    }
+
+    @keyframes typing2 {
+      0% {
+        width: 0;
+        opacity: 1;
+      }
+
+      100% {
+        width: 520px;
+        opacity: 1;
+      }
+    }
+
+    /* Icons fade-in */
+    .icons {
+      position: absolute;
+      right: 400px;
+      top: 420px;
+      opacity: 0;
+      animation: fadeIcons 1.3s ease forwards;
+      animation-delay: 3.9s;
+    }
+
+    @keyframes fadeIcons {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .icon-glow {
+      color: #b37bff;
+      font-size: 1.6rem;
+      padding: 8px;
+      border-radius: 50%;
+      background: rgba(179, 123, 255, 0.12);
+      box-shadow: 0 0 12px rgba(179, 123, 255, 0.5);
+    }
+
+    /* ================= Homepage Hidden Initially ================= */
+    #homepage {
+      display: none;
+    }
+
     /* Cyberpunk Halo */
     .halo {
       position: absolute;
@@ -69,120 +208,129 @@
 
 <body class="bg-[#0d0d15] text-white transition-all duration-300">
 
-  <!-- SMOKY CURSOR -->
-  <div id="cursor" class="smoke-cursor"></div>
-
-  <!-- THEME TOGGLE -->
-  <div class="flex items-center space-x-4 nav__btns">
-
-    <!-- THEME BUTTON -->
-    <i class="uil uil-moon text-xl cursor-pointer change-theme" id="theme-button">
-    </i>
-
-    <!-- MOBILE MENU BUTTON -->
-    <div class="nav__toggle cursor-pointer md:hidden" id="nav-toggle">
-      <i class="uil uil-apps text-2xl"></i>
+  <!-- ================ Animation Container ================= -->
+  <div id="animation">
+    <div class="text-center space-y-6 fade-up delay-2">
+      <h1 class="typewriter text-4xl md:text-4xl font-semibold
+                 bg-gradient-to-r from-cyberPink to-cyberCyan bg-clip-text text-transparent">
+        Welcome To My
+      </h1>
+      <h2 class="typewriter2 text-3xl md:text-6xl font-bold mt-2
+                 bg-gradient-to-r from-cyberPink to-cyberCyan bg-clip-text text-transparent">
+        Portfolio Website
+      </h2>
     </div>
 
+    <div class="icons mt-8 flex justify-center space-x-6">
+      <i class="fa-solid fa-code icon-glow"></i>
+      <i class="fa-solid fa-user icon-glow"></i>
+      <i class="fa-solid fa-database icon-glow"></i>
+    </div>
   </div>
 
+  <!-- ================ Homepage Container ================= -->
+  <div id="homepage">
+    <!-- SMOKY CURSOR -->
+    <div id="cursor" class="smoke-cursor"></div>
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/20 border-b border-white/10 z-50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
-
-      <!-- LOGO -->
-      <a href="#home">
-        <h1 class="text-xl font-semibold tracking-wide cursor-pointer">
-          <span class="text-cyberPink">Shahil</span>
-          <span class="text-cyberCyan">Portfolio</span>
-        </h1>
-      </a>
-
-
-      <!-- MENU -->
-      <ul class="hidden md:flex space-x-8 font-medium">
-  <li><a href="#home" class="hover:text-cyberCyan duration-200">Home</a></li>
-  <li><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
-  <li><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
-  <li><a href="#qualification" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i>Qualification</a></li>
-  <li><a href="#experiences" class="hover:text-cyberCyan duration-200">Experiences</a></li>
-  <li><a href="#projects" class="hover:text-cyberCyan duration-200">Projects</a></li>
-  <li><a href="#contact" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contact-Me</a></li>
-</ul>
-
-
-      <!-- THEME TOGGLE BUTTON -->
-      <button id="themeToggle" class="border border-cyberCyan text-cyberCyan px-3 py-1 rounded-xl font-semibold ml-5">
-        🌙
-      </button>
-
-    </div>
-  </nav>
-
-
-  <!-- HOME -->
-
-  <section id="home" class="min-h-screen flex flex-col items-center justify-center pt-20 relative">
-
-    <!-- Profile Photo with Halo -->
-    <div class="w-56 h-56 relative mb-6">
-      <div class="halo"></div>
-      <img src="images/shcoat.jpg"
-        class="w-full h-full rounded-full border-4 border-cyberCyan object-cover relative z-10">
+    <!-- THEME TOGGLE -->
+    <div class="flex items-center space-x-4 nav__btns">
+      <i class="uil uil-moon text-xl cursor-pointer change-theme" id="theme-button"></i>
+      <div class="nav__toggle cursor-pointer md:hidden" id="nav-toggle">
+        <i class="uil uil-apps text-2xl"></i>
+      </div>
     </div>
 
-    <h1 class="text-4xl font-bold text-center">Hello, I'm
-      <span class="bg-gradient-to-r from-cyberPink to-cyberCyan bg-clip-text text-transparent">Shahil Shrestha</span>
-    </h1>
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/20 border-b border-white/10 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+        <a href="#home">
+          <h1 class="text-xl font-semibold tracking-wide cursor-pointer">
+            <span class="text-cyberPink">Shahil</span>
+            <span class="text-cyberCyan">Portfolio</span>
+          </h1>
+        </a>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="#home" class="hover:text-cyberCyan duration-200">Home</a></li>
+          <li><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
+          <li><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
+          <li><a href="#qualification" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i>Qualification</a></li>
+          <li><a href="#experiences" class="hover:text-cyberCyan duration-200">Experiences</a></li>
+          <li><a href="#projects" class="hover:text-cyberCyan duration-200">Projects</a></li>
+          <li><a href="#contact" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contact-Me</a></li>
+        </ul>
 
-    <p class="text-gray-300 mt-3 text-lg text-center">
-      Web Developer • BIM Student • Designer
-    </p>
+        <button id="themeToggle" class="border border-cyberCyan text-cyberCyan px-3 py-1 rounded-xl font-semibold ml-5">
+          🌙
+        </button>
+      </div>
+    </nav>
 
-    <div class="flex space-x-6">
-      <a href="https://instagram.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-          class="fab fa-instagram"></i></a>
-      <a href="https://github.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-          class="fab fa-github"></i></a>
-      <a href="https://youtube.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-          class="fab fa-youtube"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-          class="fab fa-linkedin"></i></a>
-    </div>
+    <!-- HOME -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center pt-20 relative">
+      <div class="w-56 h-56 relative mb-6">
+        <div class="halo"></div>
+        <img src="images/shcoat.jpg"
+          class="w-full h-full rounded-full border-4 border-cyberCyan object-cover relative z-10">
+      </div>
 
-  </section>
+      <h1 class="text-4xl font-bold text-center">Hello, I'm
+        <span class="bg-gradient-to-r from-cyberPink to-cyberCyan bg-clip-text text-transparent">Shahil Shrestha</span>
+      </h1>
 
-  <!-- ABOUT -->
-  <div id="about"></div>
+      <p class="text-gray-300 mt-3 text-lg text-center">
+        Web Developer • BIM Student • Designer
+      </p>
 
-  <!-- Skill  -->
-  <div id="skills"></div> 
+      <div class="flex space-x-6">
+        <a href="https://instagram.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
+            class="fab fa-github"></i></a>
+        <a href="https://youtube.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
+            class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
 
+    <!-- ABOUT, SKILLS, etc -->
+    <div id="about"></div>
+    <div id="skills"></div>
+    <div id="qualification"></div>
+    <div id="experiences"></div>
+    <div id="projects"></div>
+    <div id="contact"></div>
 
-  <!-- Qualification  -->
-  <div id="qualification"></div>
-  
+    <!-- FOOTER -->
+    <footer class="backdrop-blur-lg bg-black/20 border-t border-white/10 py-10 text-gray-900 dark:text-white">
+      <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 max-w-6xl mx-auto px-6">
+        <div>
+          <h1 class="text-2xl font-bold">SHAHIL SHRESTHA</h1>
+          <span>BIM Student</span>
+        </div>
+        <div class="flex gap-6 text-2xl">
+          <a href="https://github.com/Shahil00099"> <i class="fab fa-github"></i> </a>
+          <a href="https://linkedin.com"> <i class="fab fa-linkedin"></i> </a>
+          <a href="https://wa.me/9779843730815" target="_blank"> <i class="fab fa-whatsapp"></i> </a>
+        </div>
+        <a href="CV/shrestha-shahil-cv.pdf" class="bg-cyberCyan px-6 py-2 rounded-lg hover:bg-cyberPink">Download CV</a>
+      </div>
+      <p class="text-gray-500 dark:text-gray-400 text-sm mt-6 text-center">
+        © 2025 SHAHIL. All rights reserved
+      </p>
+    </footer>
+  </div>
 
-  <!-- EXPERIENCES -->
-  <div id="experiences"></div>
-
-
-
-
-  <!-- PROJECTS -->
-  <div id="projects"></div>
-
-    <!-- EXPERIENCES -->
-  <div id="experiences"></div>
-
-  <!-- CONTACT -->
-  <div id="contact"></div>
-
-
-
-  <!-- SCRIPT -->
+  <!-- ================ Script ================= -->
   <script>
+    // SHOW HOMEPAGE AFTER ANIMATION
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("animation").style.display = "none";
+        document.getElementById("homepage").style.display = "block";
+      }, 5500); // adjust to match animation length
+    });
 
     /* THEME TOGGLE */
     const toggle = document.getElementById("themeToggle");
@@ -191,7 +339,6 @@
       document.body.classList.toggle("bg-white");
       document.body.classList.toggle("text-black");
       document.body.classList.toggle("dark-theme");
-
       toggle.textContent =
         document.body.classList.contains("bg-white") ? "🌞" : "🌙";
     });
@@ -199,55 +346,17 @@
     /* SMOKY CURSOR ONLY IN HOME */
     const cursor = document.getElementById("cursor");
     const home = document.getElementById("home");
-
     document.addEventListener("mousemove", (e) => {
       const isHome = e.clientY < home.offsetHeight;
       cursor.style.opacity = isHome ? "0.8" : "0";
-
       if (isHome) {
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
       }
     });
-
-      
   </script>
 
-
-  <!-- FOOTER -->
-
-  <footer class="backdrop-blur-lg bg-black/20 border-t border-white/10 py-10 text-gray-900 dark:text-white">
-    <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 max-w-6xl mx-auto px-6">
-      <!-- Name -->
-      <div>
-        <h1 class="text-2xl font-bold">SHAHIL SHRESTHA</h1>
-        <span>BIM Student</span>
-      </div>
-
-      <!-- Social icons -->
-      <div class="flex gap-6 text-2xl">
-        <a href="https://github.com/Shahil00099"> <i class="fab fa-github"></i> </a>
-        <a href="https://linkedin.com"> <i class="fab fa-linkedin"></i> </a>
-        <a href="https://wa.me/9779843730815" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-
-      </div>
-
-      <!-- Download CV -->
-      <a href="CV/shrestha-shahil-cv.pdf" class="bg-cyberCyan px-6 py-2 rounded-lg hover:bg-cyberPink">Download CV</a>
-    </div>
-
-    <!-- Copyright -->
-    <p class="text-gray-500 dark:text-gray-400 text-sm mt-6 text-center">
-      © 2025 SHAHIL. All rights reserved
-    </p>
-  </footer>
-
-
-<script src="load-sections.js"></script>
-
+  <script src="load-sections.js"></script>
 
 </body>
 
