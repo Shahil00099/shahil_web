@@ -78,28 +78,30 @@
 
     /* Typewriter */
     .typewriter,
-.typewriter2 {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  padding-bottom: 4px;
-  line-height: 1.2;
-  border-right: 2px solid white; /* caret appears while typing */
-}
+    .typewriter2 {
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-bottom: 4px;
+      line-height: 1.2;
+      border-right: 2px solid white;
+      /* caret appears while typing */
+    }
 
-.typewriter {
-  animation: typing1 2s steps(30) forwards;
-}
+    .typewriter {
+      animation: typing1 2s steps(30) forwards;
+    }
 
-.typewriter2 {
-  animation: typing2 2s steps(35) forwards;
-  animation-delay: 2s;
-}
+    .typewriter2 {
+      animation: typing2 2s steps(35) forwards;
+      animation-delay: 2s;
+    }
 
-/* Just hide the caret after animation completes */
-.typewriter, .typewriter2 {
-  border-right: none;
-}
+    /* Just hide the caret after animation completes */
+    .typewriter,
+    .typewriter2 {
+      border-right: none;
+    }
 
 
     .typewriter {
@@ -254,10 +256,12 @@
           <li><a href="#home" class="hover:text-cyberCyan duration-200">Home</a></li>
           <li><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
           <li><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
-          <li><a href="#qualification" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i>Qualification</a></li>
+          <li><a href="#qualification" class="nav__link"><i
+                class="uil uil-briefcase-alt nav__icon"></i>Qualification</a></li>
           <li><a href="#experiences" class="hover:text-cyberCyan duration-200">Experiences</a></li>
           <li><a href="#projects" class="hover:text-cyberCyan duration-200">Projects</a></li>
-          <li><a href="#contact" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contact-Me</a></li>
+          <li><a href="#contact" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contact-Me</a>
+          </li>
         </ul>
 
         <button id="themeToggle" class="border border-cyberCyan text-cyberCyan px-3 py-1 rounded-xl font-semibold ml-5">
@@ -283,14 +287,14 @@
       </p>
 
       <div class="flex space-x-6">
-        <a href="https://instagram.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-            class="fab fa-instagram"></i></a>
+        <a href="https://instagram.com" target="_blank"
+          class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i class="fab fa-instagram"></i></a>
         <a href="https://github.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
             class="fab fa-github"></i></a>
         <a href="https://youtube.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
             class="fab fa-youtube"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i
-            class="fab fa-linkedin"></i></a>
+        <a href="https://linkedin.com" target="_blank"
+          class="text-cyberCyan hover:text-cyberPink transition text-2xl"><i class="fab fa-linkedin"></i></a>
       </div>
     </section>
 
@@ -314,7 +318,11 @@
           <a href="https://linkedin.com"> <i class="fab fa-linkedin"></i> </a>
           <a href="https://wa.me/9779843730815" target="_blank"> <i class="fab fa-whatsapp"></i> </a>
         </div>
-        <a href="CV/Shahil_Shrestha_Updated_CV.pdf" class="bg-cyberCyan px-6 py-2 rounded-lg hover:bg-cyberPink">Download CV</a>
+        <a href="CV/Shahil_Shrestha_Updated_CV.pdf" download
+          class="inline-flex items-center px-6 py-3 bg-cyberCyan text-black font-semibold rounded-xl shadow-lg hover:shadow-cyberPink transition">
+          Download CV
+          <i class="fas fa-download ml-3"></i>
+        </a>
       </div>
       <p class="text-gray-500 dark:text-gray-400 text-sm mt-6 text-center">
         © 2025 SHAHIL. All rights reserved
