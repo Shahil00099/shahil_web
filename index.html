@@ -235,13 +235,7 @@
     <!-- SMOKY CURSOR -->
     <div id="cursor" class="smoke-cursor"></div>
 
-    <!-- THEME TOGGLE -->
-    <div class="flex items-center space-x-4 nav__btns">
-      <i class="uil uil-moon text-xl cursor-pointer change-theme" id="theme-button"></i>
-      <div class="nav__toggle cursor-pointer md:hidden" id="nav-toggle">
-        <i class="uil uil-apps text-2xl"></i>
-      </div>
-    </div>
+   
 
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/20 border-b border-white/10 z-50">
@@ -263,9 +257,7 @@
 </ul>
 
 
-        <button id="themeToggle" class="border border-cyberCyan text-cyberCyan px-3 py-1 rounded-xl font-semibold ml-5">
-          🌙
-        </button>
+        
       </div>
     </nav>
 
@@ -342,13 +334,7 @@
     /* THEME TOGGLE */
     const toggle = document.getElementById("themeToggle");
 
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("bg-white");
-      document.body.classList.toggle("text-black");
-      document.body.classList.toggle("dark-theme");
-      toggle.textContent =
-        document.body.classList.contains("bg-white") ? "🌞" : "🌙";
-    });
+    
 
     /* SMOKY CURSOR ONLY IN HOME */
     const cursor = document.getElementById("cursor");
